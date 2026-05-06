@@ -1,16 +1,16 @@
 import React from 'react'
 import icon1 from "../../../assets/travel-guide.png";
 import icon2 from "../../../assets/mission-icon.png";
-// import Mainbtn from "../../Buttons/Mainbtn";
+import Mainbtn from "../../Buttons/Mainbtn";
 
-// import authore1 from "../../../assets/pic1.jpg";
-// import authore2 from "../../../assets/pic2.jpg";
-// import authore3 from "../../../assets/pic3.jpg";
+import authore1 from "../../../assets/pic1.jpg";
+import authore2 from "../../../assets/pic2.jpg";
+import authore3 from "../../../assets/pic3.jpg";
 
-// import airplane from "../../../assets/airplane.png";
-// import aboutimg1 from "../../../assets/about-image01.png";
-// import aboutimg2 from "../../../assets/about-image02.png";
-// import aboutimg3 from "../../../assets/about-image03.png";
+import airplane from "../../../assets/airplane.png";
+import aboutimg1 from "../../../assets/about-image01.jpg";
+import aboutimg2 from "../../../assets/about-image02.jpg";
+import aboutimg3 from "../../../assets/about-image03.jpg";
 
 
 const About = () => {
@@ -48,9 +48,68 @@ const About = () => {
                   </li>
                 </ul>
 
-                
+                <div className="flex items-center flex-wrap gap-10 pt-8">
+                  <Mainbtn text="Discover More" to="/about" />
+                  <div className="flex items-center gap-5">
+                    <div className="author-img flex items-center">
+                      <img
+                        src={authore1}
+                        alt="author-img"
+                        className="w-10 rounded-full"
+                      />
+                      <img
+                        src={authore2}
+                        alt="author-img"
+                        className="w-10 rounded-full"
+                      />
+                      <img
+                        src={authore3}
+                        alt="author-img"
+                        className="w-10 rounded-full"
+                      />
+                    </div>
+                  </div>
 
+                    <p className='text-md'>
+                      <span className='block text-2xl font-bold text-secondary'>3.5k</span>
+                      Happy Travelers
+                    </p>
+                </div>
             </div>
+            <div className="about-image w-full xl:w-[50%] relative hidden xl:flex justify-center items-center h-full">
+  
+            <div className="airplane absolute transition-all duration-500 -top-1 right-0">
+              <img
+                src={airplane}
+                alt="air-plane-image"
+              />
+            </div>
+
+            <div className="about-image1 ">
+              <img
+                src={aboutimg1}
+                alt="about-img"
+                className='rounded-full w-full'
+              />
+            </div>
+
+            <div className="about-image2 ">
+              <img
+                src={aboutimg2}
+                alt="about-img"
+                className='h-full w-full'
+              />
+            </div>
+
+            <div className="about-image3 ">
+              <img
+                src={aboutimg3}
+                alt="about-img"
+                className='h-full w-full'
+              />
+            </div>
+
+          </div>
         </div>
     </>
   )
