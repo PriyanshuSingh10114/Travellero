@@ -46,6 +46,55 @@ function BookingSteps() {
            <img src={titleShape} alt="title-shape" className="w-[35%] object-contain absolute -bottom-12"/> 
         </div>
 
+        <div className="pb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {stepsData.map((step) => (
+              <div
+                key={step.id}
+                className="steps-card p-10 pb-7 hover:shadow-xl border border-secondary/10 rounded-lg hover:-translate-y-2 transition-all duration-300"
+              >
+                <div className="flex justify-between items-center gap-3">
+                  <span className="text-5xl font-bold bg-secondary w-20 h-20 rounded-lg flex items-center justify-center text-white">
+                    {step.number}
+                  </span>
+                  <div className="steps-icon border-4 border-yellow rounded-full p-4">
+                    <img src={step.icon} alt={step.title} />
+                  </div>
+                </div>
+                <div className="mt-5">
+                  <h2 className="text-secondary font-semibold text-2xl">{step.title}</h2>
+                  <p className="text-gray-500 text-md tracking-wide">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <div className="specialOfferBanner bg-yellow flex flex-wrap items-center justify-center lg:justify-between text-center lg:text-start px-5 py-7 rounded-2xl">
+          <div className="flex items-end">
+            <h1 className="text-9xl font-bold text-white">48</h1>
+            <div className="text-3xl font0-extrabold text-secondary">
+              <h5>%</h5>
+              <h5>OFF</h5>
+            </div>
+          </div>
+          <div>
+            <h5 className="text-white font-semibold text-2xl">
+              Get Special Offer
+            </h5>
+
+            <h1 className="text-5xl md:text-6xl text-title mt-5 text-secondary">
+              Tours and Trip Packages , Globally
+            </h1>
+          </div>
+
+          <div className="mt-5">
+            <Mainbtn
+              text="Discover More"
+              className="discover-btn"
+            />
+          </div>
+        </div>
       </div>
     </>
   );

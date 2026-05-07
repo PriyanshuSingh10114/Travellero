@@ -501,3 +501,34 @@ img{
     width: 100%;
     border-radius: 100px 30px 100px 30px;
 }
+
+/* booking steps section */
+.steps-icon img{
+    max-width: 48px;
+    width: 100%;
+    filter: brightness(0) saturate(100%) invert(25%) sepia(21%)  saturate(4469%) hue-rotate(154deg) grayscale(100%) brightness(93%) contrast(95%);
+}
+
+.SpecialOfferBanner .text-title {
+  font-family: var(--font-kaushan);
+}
+
+.SpecialOfferBanner {
+  background-image: url(../src/assets/Index/BookingSteps/Banner-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.discover-btn{
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: #fff;
+}
+
+.discover-btn:hover{
+    color: #000;
+}
+
+.discover-btn::after{
+    background-color: var(--color-prim);
+}
