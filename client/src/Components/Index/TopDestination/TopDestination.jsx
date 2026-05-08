@@ -9,7 +9,10 @@ import { Navigation, Autoplay } from "swiper/modules"
 
 import "swiper/css"
 import "swiper/css/navigation"
-// import {icon} from "@iconify/react"
+import {Icon} from "@iconify/react"
+
+import destinations from "../../../Data/TopDestination"
+import DestinationCard from "../../DestinationCard/DestinationCard"
 
 const TopDestination = () => {
   return (
@@ -52,7 +55,7 @@ const TopDestination = () => {
                             <h3 className="text-3xl text-prim font-semibold">3.5k</h3>
                             <p className="text-white">Happy Customers</p>
                         </div>
-                        
+
                         <div className="mt-5">
                             <Mainbtn text="view more destinations" to='/destinations'/>
                         </div>
@@ -63,6 +66,46 @@ const TopDestination = () => {
                         </h1>
                     </div>
                 </div>
+            </div>
+            <div className="relative">
+                <button
+                    className="swiper-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-yellow text-white cursor-pointer flex items-center justify-center shadow"
+                >
+                    <Icon icon="ep:arrow-left-bold" width="24" height="24" />
+                </button>
+
+                <button
+                    className="swiper-next absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-yellow text-white cursor-pointer flex items-center justify-center shadow"
+                >
+                    <Icon icon="ep:arrow-right-bold" width="24" height="24" />
+                </button>
+
+                <Swiper
+                    modules={[Navigation,Autoplay]}
+                    spaceBetween={40}
+                    slidesPerView="auto"
+                    navigation={{
+                        prevEl: ".swiper-prev",
+                        nextEl: ".swiper-next",
+                    }}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    className="destination-swiper"
+                >
+                    {destinations.map((item)=>(
+                        <SwiperSlide key={item.id} className="w-65! hover:w-125! transition-all! duration-500!">
+                            <DestinationCard
+                                title={item.title}
+                                listing={item.listing}
+                                image={item.image}
+                            />
+                            
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
         </div>
        </div>

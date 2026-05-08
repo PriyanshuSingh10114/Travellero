@@ -3,6 +3,7 @@ import Hero from './Hero/Hero'
 import About from './About/About'
 import BookingSteps from './BookingSteps/BookingSteps'
 import TopDestination from './TopDestination/TopDestination'
+import TourGuide from './TourGuide/TourGuide'
 
 const Index = () => {
   return (
@@ -11,6 +12,7 @@ const Index = () => {
         <About/>
         <BookingSteps/>
         <TopDestination/>
+        <TourGuide/>
     </>
   )
 }
