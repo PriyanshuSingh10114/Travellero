@@ -532,3 +532,28 @@ img{
 .discover-btn::after{
     background-color: var(--color-prim);
 }
+
+/* Tour section */
+.rotate{
+    animation: rotate 200s linear infinite;
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* Tour categories section */
+
+.tour-ctg-container::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 255px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.56)0%, rgba(255,255,255,0) 90%);
+    z-index: 1;
+}
+

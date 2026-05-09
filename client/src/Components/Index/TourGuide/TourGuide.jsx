@@ -24,16 +24,16 @@ const TourGuide = () => {
         <div className="flex flex-col bg-[#daeef] sm:p-10 rounded-lg">
             <div className="bg-white px-[2%] sm:px-[8%] py-[6%] md:py-[8%] rounded-2xl">
                 <div className="title flex flex-col justify-center items-center text-center relative mb-10">
-                <h1 className="text-secondary text-4xl md:text-6xl font-bold">
-                    <span className="text-yellow">
-                    Meet With
-                    </span>{" "}
-                    Tour Guide
-                </h1>
-                <p className='text-secondary my-2 text-lg'>
-                    Destinations worth exploring! Here are a few popular spots
-                </p>
-                <img src={titleShape} alt="titleShape" className="w-[35%] object-contain absolute -bottom-12"/>
+                    <h1 className="text-secondary text-4xl md:text-6xl font-bold">
+                        <span className="text-yellow">
+                        Meet With
+                        </span>{" "}
+                        Tour Guide
+                    </h1>
+                    <p className='text-secondary my-2 text-lg'>
+                        Destinations worth exploring! Here are a few popular spots
+                    </p>
+                    <img src={titleShape} alt="titleShape" className="w-[35%] object-contain absolute -bottom-12"/>
                 </div>
 
                 <div className="tour-guid-container bg-no-repeat bg-cover bg-center flex justify-between items-start flex-col xl:flex-row pt-10 gap-10">
@@ -43,11 +43,11 @@ const TourGuide = () => {
                         alt="circle-image"
                         className="absolute top-0 left-0 w-full h-full rotate"
                         />
-                        <div className="title relative text-center text-secondary text-3xl sm:text-4xl md:text-6xl font-kaushan font-medium py-8">
-                            Meet with <span className="text-white block text-4xl sm:text-5xl md:text-8xl font-medium [text-shadow:2px_5px_0px_rgba(14,137,145,0.2)]">
-                                Expert Guide
-                            </span>
-                        </div>
+                            <div className="title relative text-center text-secondary text-3xl sm:text-4xl md:text-6xl font-kaushan font-medium py-8">
+                                Meet with <span className="text-white block text-4xl sm:text-5xl md:text-8xl font-medium [text-shadow:2px_5px_0px_rgba(14,137,145,0.2)]">
+                                    Expert Guide
+                                </span>
+                            </div>
                         <img src={teamimg} alt="team-image" className="w-full h-full z-1 relative" />
                     </div>
 
@@ -60,13 +60,33 @@ const TourGuide = () => {
                             <div className="team-img rounded-2xl overflow-hidden group">
                                 <img src={member.image} alt="team-img" className="group-hover:scale-110 transition-all duration-300" />
                             </div>
-                            <div className="team-content text-center pt-5">
 
-                            <ul className="flex justify-center mb-2">
-                                <li className="social-icon inline-flex h-11.5 w-11.5 bg-yellow me-2.5 rounded-[50%] overflow-hidden justify-center items-center transition-all duration-500 ease-in-out group hover:rounded-[10px] hover:shadow-lg">
-                                    <Link to="" className="h-9 w-9 flex justify-center items-center bg-secondary text-white text-[18px] rounded-[50%] "></Link>
-                                </li>
-                            </ul>
+                            <div className="team-content text-center pt-5">
+                                <ul className="flex justify-center mb-2">
+                                    <li className="social-icon inline-flex h-11.5 w-11.5 bg-yellow me-2.5 rounded-[50%] overflow-hidden justify-center items-center transition-all duration-500 ease-in-out group hover:rounded-[10px] hover:shadow-lg">
+                                        <Link to="https://x.com/" className="h-9 w-9 flex justify-center items-center bg-secondary text-white text-[18px] rounded-[50%] transition-all duration-500 ease-in-out group-hover:text-yellow group-hover:rounded-[10px]">
+                                            <Icon icon="codicon:twitter" width="24" height="24" />
+                                        </Link>
+                                    </li>
+
+                                    <li className="social-icon inline-flex h-11.5 w-11.5 bg-yellow me-2.5 rounded-[50%] overflow-hidden justify-center items-center transition-all duration-500 ease-in-out group hover:rounded-[10px] hover:shadow-lg">
+                                    <Link to="https://www.facebook.com/" className="h-9 w-9 flex justify-center items-center bg-secondary text-white text-[18px] rounded-[50%] transition-all duration-500 ease-in-out group-hover:text-yellow group-hover:rounded-[10px]">
+                                    <Icon icon="mdi:facebook" width="24" height="24" />
+                                    </Link>
+                                    </li>
+
+                                    <li className="social-icon inline-flex h-11.5 w-11.5 bg-yellow me-2.5 rounded-[50%] overflow-hidden justify-center items-center transition-all duration-500 ease-in-out group hover:rounded-[10px] hover:shadow-lg">
+                                    <Link to="https://www.instagram.com/" className="h-9 w-9 flex justify-center items-center bg-secondary text-white text-[18px] rounded-[50%] transition-all duration-500 ease-in-out group-hover:text-yellow group-hover:rounded-[10px]">
+                                    <Icon icon="mingcute-instagram-line" width="24" height="24" />
+                                    </Link>
+                                    </li>
+
+                                    <li className="social-icon inline-flex h-11.5 w-11.5 bg-yellow me-2.5 rounded-[50%] overflow-hidden justify-center items-center transition-all duration-500 ease-in-out group hover:rounded-[10px] hover:shadow-lg">
+                                    <Link to="https://www.youtube.com/" className="h-9 w-9 flex justify-center items-center bg-secondary text-white text-[18px] rounded-[50%] transition-all duration-500 ease-in-out group-hover:text-yellow group-hover:rounded-[10px]">
+                                    <Icon icon="line-md:youtube" width="24" height="24" />
+                                    </Link>
+                                    </li>
+                                </ul>
                             </div>
 
                         </div>
