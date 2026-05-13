@@ -6,7 +6,7 @@ import Index from './Components/Index/Index'
 import Footer from './Components/Footer/Footer'
 import About from './Pages/About'
 import Services from './Pages/Services'
-import ServiceDetails from './Pages/ServicesDetails'
+import ServiceDetails from './Pages/ServiceDetails'
 function App() {
 
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path='/' element={<Index/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/services' element={<Services/>}/>
-          <Route path='/services/:id' element={<ServicesDetails/>}/>
+          <Route path='/service/:id' element={<ServiceDetails/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
