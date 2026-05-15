@@ -1,6 +1,6 @@
 import React from "react";
 import titleShape from "../assets/Title-Shape.png";
-import sectionbanner from "../assets/section-banner.jpg";
+import sectionbanner from "../assets/service-page-banner.jpg";
 import { Link } from "react-router-dom";
 import services from "../Data/Services.json";
 import Testimonials from "../Components/Index/Testimonials/Testimonials";
@@ -45,17 +45,17 @@ const Services = () => {
                 <img src={titleShape} alt="title-shape" className="w-[35%] object-contain absolute -bottom-12"/> 
               </div>
 
-              <div className='bg-[#daeeef] p-5 mb:p-10 rounded-2xl my-10 md:my-14 '>
+              <div className='bg-[#daeeef] p-5 md:p-10 rounded-2xl my-10 md:my-14 '>
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
                     {services.map((srv, index) => {
                       return (
                         <>
                           <Link
-                            to={`/service/${srv.id}`}
+                            to={`/services/${srv.id}`}
                             className="service-item bg-white shadow-xl rounded-3xl p-3 group hover:bg-secondary transition-colors duration-500 cursor-pointer"
                           >
                             <div className="service-image rounded-3xl overflow-hidden h-60 md:h-100">
-                                <img src={srv.image} alt={srv.name} className='w-full h-full! object-cover' />
+                                <img src={srv.image} alt={srv.name} className='w-full h-full object-cover' />
                             </div>
                             <span className='text-center block pt-5 pb-2 text-2xl font-medium text-secondary group-hover:text-yellow transition-colors duration-500'>{srv.name}</span>
                           </Link>
