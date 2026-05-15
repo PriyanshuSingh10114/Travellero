@@ -55,7 +55,7 @@ const TourGuide = () => {
                         {teamMembers.map((member) => (
                         <div
                             key={member.id}
-                            className="tem-item bg-white [box-shadow:0px_18px_18px_rgba(0,106,114,0.1)] p-3.5 rounded-2xl"
+                            className="team-item bg-white [box-shadow:0px_18px_18px_rgba(0,106,114,0.1)] p-3.5 rounded-2xl"
                             >
                             <div className="team-img rounded-2xl overflow-hidden group">
                                 <img src={member.image} alt="team-img" className="group-hover:scale-110 transition-all duration-300" />

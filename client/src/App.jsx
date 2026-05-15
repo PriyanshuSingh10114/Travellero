@@ -8,6 +8,9 @@ import About from './Pages/About'
 import Services from './Pages/Services'
 import ServiceDetails from './Pages/ServiceDetails'
 import Testimonials from './Pages/Testimonials'
+import TourGuide from './Pages/TourGuide'
+import TourGuideDetails from './Pages/TourGuideDetails'
+
 function App() {
 
   return (
@@ -20,6 +23,9 @@ function App() {
           <Route path='/services' element={<Services/>}/>
           <Route path='/services/:id' element={<ServiceDetails/>}/>
           <Route path='/testimonials' element={<Testimonials/>}/>
+          <Route path='/tour-guide' element={<TourGuide/>}/>
+          <Route path='/tourguide/:id' element={<TourGuideDetails/>}/>
+
         </Routes>
         <Footer/>
       </BrowserRouter>

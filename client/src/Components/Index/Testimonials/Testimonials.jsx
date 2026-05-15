@@ -32,21 +32,17 @@ const Testimonials = () => {
   return (
     <>
       <div className="bg-[#effefe] px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%]">
-
         {/* TITLE SECTION */}
         <div className="title flex flex-col justify-center items-center text-center relative pb-10">
-
           <h1 className="text-secondary text-4xl md:text-6xl font-bold">
             <span className="text-yellow">
               Our Client
             </span>{" "}
             Says!
           </h1>
-
           <p className="text-secondary my-2 text-lg">
             Destinations worth exploring! Here are a few popular spots
           </p>
-
           <img
             src={titleShape}
             alt="titleShape"
