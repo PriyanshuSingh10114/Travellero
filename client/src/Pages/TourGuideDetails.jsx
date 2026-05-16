@@ -124,6 +124,82 @@ const TourGuideDetails = () => {
                             {team.Email}
                         </li>
                     </ul>
+
+                    <h3 className='text-secondary text-4xl font-bold pb-2'>Essential Skills</h3>
+
+                    <ul className='space-y-4 mb-5'>
+
+                        <li className='flex items-center gap-2 text-gray-500/80 font-light'>
+                            <Icon icon="fluent:arrow-circle-right-16-regular" width="24" height="24" className='text-yellow'>
+                            </Icon>
+                            Communications & Storytelling
+                        </li>
+
+                        <li className='flex items-center gap-2 text-gray-500/80 font-light'>
+                            <Icon icon="fluent:arrow-circle-right-16-regular" width="24" height="24" className='text-yellow'>
+                            </Icon>
+                            Leadership & group management
+                        </li>
+
+                        <li className='flex items-center gap-2 text-gray-500/80 font-light'>
+                            <Icon icon="fluent:arrow-circle-right-16-regular" width="24" height="24" className='text-yellow'>
+                            </Icon>
+                            Time coordination & logistics
+                        </li>
+
+                        <li className='flex items-center gap-2 text-gray-500/80 font-light'>
+                            <Icon icon="fluent:arrow-circle-right-16-regular" width="24" height="24" className='text-yellow'>
+                            </Icon>
+                            Multilingual ability
+                        </li>
+
+                        <li className='flex items-center gap-2 text-gray-500/80 font-light'>
+                            <Icon icon="fluent:arrow-circle-right-16-regular" width="24" height="24" className='text-yellow'>
+                            </Icon>
+                            Cultural sensitivity
+                        </li>
+
+                        <li className='flex items-center gap-2 text-gray-500/80 font-light'>
+                            <Icon icon="fluent:arrow-circle-right-16-regular" width="24" height="24" className='text-yellow'>
+                            </Icon>
+                            First aid & safety awareness (especially for adventure guides)
+                        </li>
+
+                    </ul>
+
+                    <h3 className='text-secondary text-4xl font-bold pb-2'>Certifications & Training</h3>
+
+                    <ul className='space-y-4 mb-5'>
+                        <li className='flex items-center gap-2 text-gray-500/80 font-light'>
+                            <Icon icon="fluent:arrow-circle-right-16-regular" width="24" height="24" className='text-yellow'>
+                            </Icon>
+                            <div className=''>
+                                <span className='text-secondary font-medium'>India:</span>
+                            </div>
+                            Ministry of Tourism offers licenses via IITTM and regional programs
+                        </li>
+
+                        <li className='flex items-center gap-2 text-gray-500/80 font-light'>
+                            <Icon icon="fluent:arrow-circle-right-16-regular" width="24" height="24" className='text-yellow'>
+                            </Icon>
+                            <div className=''>
+                                <span className='text-secondary font-medium'>Global:</span>
+                            </div>
+                            WFTGA (World Federation of Tourist Guide Associations) sets international standards
+                        </li>
+
+                        <li className='flex items-center gap-2 text-gray-500/80 font-light'>
+                            <Icon icon="fluent:arrow-circle-right-16-regular" width="24" height="24" className='text-yellow'>
+                            </Icon>
+                            <div className=''>
+                                <span className='text-secondary font-medium'>Specialized Courses:</span>
+                            </div>
+                            Adventure guiding, museum interpretation, eco-tourism, etc.
+                        </li>
+
+
+                    </ul>
+
                 </div>
 
             </div>

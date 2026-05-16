@@ -10,6 +10,8 @@ import ServiceDetails from './Pages/ServiceDetails'
 import Testimonials from './Pages/Testimonials'
 import TourGuide from './Pages/TourGuide'
 import TourGuideDetails from './Pages/TourGuideDetails'
+import Faqs from './Pages/Faqs'
+import PricingPlan from './Pages/PricingPlan'
 
 function App() {
 
@@ -25,6 +27,8 @@ function App() {
           <Route path='/testimonials' element={<Testimonials/>}/>
           <Route path='/tour-guide' element={<TourGuide/>}/>
           <Route path='/tourguide/:id' element={<TourGuideDetails/>}/>
+          <Route path='/faqs' element={<Faqs/>}/>
+          <Route path='/pricing' element={<PricingPlan/>}/>
 
         </Routes>
         <Footer/>
