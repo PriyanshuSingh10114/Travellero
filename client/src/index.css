@@ -887,3 +887,37 @@ img{
     border-radius: 110px;
     background-color: #fff;
 }
+
+.step{
+    border-radius: 30px;
+    padding: 50px 30px 20px 20px;
+    z-index: 1;
+}
+
+.step-1{
+    background: linear-gradient(to bottom,#53a4c0 45%,#ffffff);
+    margin-bottom: 30px;
+}
+
+.step-1 image{
+    max-width: 48px;
+    width: 100%;
+    filter: brightness(0) saturate(100%) invert(73%) sepia(22%) saturate(928%) hue-rotate(153deg) brightness(78%) contrast(89%)
+}
+
+.media-img{
+    max-width: 232px;
+    width: 100%;
+    max-height: 155px;
+    height: 100%;
+}
+
+.bld-num{
+    font-size: 76px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.2;
+    filter: drop-shadow(0 4px 4px rgb(0 0 0 / .25));
+    margin-left: 30px;
+    margin-bottom: 0;
+}
