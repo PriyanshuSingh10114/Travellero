@@ -119,7 +119,7 @@ function Navmenu({menuOpen,toggleMenu}) {
           </li>
 
           <li>
-            <Link to="/error" className="block px-4 py-2 hover:translate-x-1 transition">
+            <Link to="/pagenotfound" className="block px-4 py-2 hover:translate-x-1 transition">
               Error-404
             </Link>
           </li>
@@ -360,6 +360,12 @@ function Navmenu({menuOpen,toggleMenu}) {
             <li>
               <Link to='/pricing' className='block px-4 py-2 hover:translate-x-1 transition'>
                 Pricing
+              </Link>
+            </li>
+
+            <li>
+              <Link to='/pagenotfound' className='block px-4 py-2 hover:translate-x-1 transition'>
+                Error-404
               </Link>
             </li>
           </ul>

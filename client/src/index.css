@@ -971,3 +971,21 @@ img{
     filter: brightness(0) saturate(100%) invert(22%) sepia(94%) saturate(1002%) hue-rotate(151deg) brightness(96%) contrast(95%);
 }
 
+.error-ballon-img{
+    max-width: 172px;
+    margin-bottom: 20px;
+    animation: error-ballonanimation 2s cubic-bezier(.25,.46,.45,.94) infinite alternate reverse both;
+}
+
+
+@keyframes error-ballonanimation {
+    0%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(-15px);
+    }
+
+    
+}
