@@ -1,7 +1,7 @@
 import React from 'react'
 import titleShape from "../../../assets/Title-Shape.png";
 import tourData from "../../../Data/PopularTours.json"
-import PopularTourCard from '../PopularTourCard.jsx/PopularTourCard';
+import PopularTourCard from '../PopularTourCard/PopularTourCard';
 
 const Tours = () => {
   return (

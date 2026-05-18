@@ -4,6 +4,7 @@ import sectionbanner from "../assets/service-page-banner.jpg";
 import { Link, useParams } from "react-router-dom";
 
 import Mainbtn from "../Components/Buttons/Mainbtn";
+import {Icon} from "@iconify/react";
 
 
 const Contact = () => {

@@ -4,7 +4,7 @@ import sectionbanner from "../assets/service-page-banner.jpg";
 import { Link } from "react-router-dom";
 
 import tourData from "../Data/PopularTours.json"
-import PopularTourCard from '../PopularTourCard.jsx/PopularTourCard';
+import PopularTourCard from '../Components/Index/PopularTourCard/PopularTourCard';
 
 const Tours = () => {
   return (

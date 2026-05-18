@@ -15,6 +15,9 @@ import PricingPlan from './Pages/PricingPlan'
 import Destination from './Pages/Destination'
 import DestinationDetails from './Pages/DestinationDetails'
 import Tours from './Pages/Tours'
+import Blogs from './Pages/Blogs'
+import Contact from './Pages/Contact'
+import Page404 from './Pages/Page404'
 import TourDetails from './Pages/TourDetails'
 
 function App() {
