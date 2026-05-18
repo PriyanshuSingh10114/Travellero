@@ -14,6 +14,8 @@ import Faqs from './Pages/Faqs'
 import PricingPlan from './Pages/PricingPlan'
 import Destination from './Pages/Destination'
 import DestinationDetails from './Pages/DestinationDetails'
+import Tours from './Pages/Tours'
+import TourDetails from './Pages/TourDetails'
 
 function App() {
 
@@ -33,7 +35,11 @@ function App() {
           <Route path='/destination' element={<Destination/>}/>
           <Route path='/destination/:id' element={<DestinationDetails/>}/>
           <Route path='/pricing' element={<PricingPlan/>}/>
-
+          <Route path='/tours' element={<Tours/>}/>
+          <Route path='/blogs' element={<Blogs/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/pagenotfound' element={<Page404/>}/>
+          <Route path='/tours/:id' element={<TourDetails/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
