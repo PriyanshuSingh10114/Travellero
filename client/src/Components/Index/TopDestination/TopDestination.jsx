@@ -1,116 +1,229 @@
-import manrock from "../../../assets/man-rock.png"
-import Customer1 from "../../../assets/Customer-1.jpg"
-import Customer2 from "../../../assets/Customer-2.jpg"
-import Customer3 from "../../../assets/Customer-3.jpg"
-import Mainbtn from "../../Buttons/Mainbtn"
+import { useRef } from "react";
 
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Autoplay } from "swiper/modules"
+import manrock from "../../../assets/man-rock.png";
+import Customer1 from "../../../assets/Customer-1.jpg";
+import Customer2 from "../../../assets/Customer-2.jpg";
+import Customer3 from "../../../assets/Customer-3.jpg";
 
-import "swiper/css"
-import "swiper/css/navigation"
-import {Icon} from "@iconify/react"
+import Mainbtn from "../../Buttons/Mainbtn";
+import DestinationCard from "../../DestinationCard/DestinationCard";
 
-import destinations from "../../../Data/TopDestination"
-import DestinationCard from "../../DestinationCard/DestinationCard"
+import destinations from "../../../Data/TopDestination";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+
+import { Icon } from "@iconify/react";
 
 const TopDestination = () => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   return (
-    <>
-      <div className="px-[2%] sm:px-[5%] lg:px-[5%] py-[5%] bg-[#DBEEEE]">
-        <div className="bg-secondary px-[2%] sm:px-[3%] py-[5%] rounded-2xl relative">
-            <img
-            src={manrock}
-            alt="man-rock-img"
-            className="absolute right-0 top-0 h-auto"
-            />
-            <div className="w-full flex flex-col xl:flex-row gap-5 justify-between items-center pb-10 z-1 relative">
-                <div className="w-full xl:w-1/2">
-                    <h2 className="text-5xl text-white font-bold">
-                    <span className="text-yellow">Most Favorite </span>Tour Places!
-                    </h2>
-                    <p className="text-gray-300 tracking-wide my-3">
-                        Choosing a destination can be exciting but also a bit overwhelming with so many amazing places out there! Let's narrow it down a little. Are you dreaming of peaceful nature, buzzing cities, historical wonders, or relaxing beaches?
-                    </p>
-                    <div className="flex items-center my-5">
-                        <div className="flex items-center">
-                            <img
-                            src={Customer1}
-                            alt="Customer1"
-                            className="w-10 h-10 rounded-full object-cover border border-white"
-                            />
-                            <img
-                            src={Customer2}
-                            alt="Customer2"
-                            className="w-10 h-10 rounded-full object-cover border border-white translate-x-2"
-                            />
-                            <img
-                            src={Customer3}
-                            alt="Customer3"
-                            className="w-10 h-10 rounded-full object-cover border border-white translate-x-4"
-                            />
-                        </div>
+    <section className="px-[5%] py-12 md:py-16 lg:py-20 bg-[#DBEEEE]">
+      <div className="bg-secondary rounded-2xl relative overflow-hidden px-5 sm:px-8 py-10 md:py-14">
+        {/* Background Image */}
+        <img
+          src={manrock}
+          alt="Traveler"
+          className="
+            absolute
+            right-0
+            top-0
+            w-[220px]
+            md:w-[350px]
+            xl:w-[500px]
+            opacity-20
+            xl:opacity-100
+            pointer-events-none
+            select-none
+          "
+        />
 
-                        <div>
-                            <h3 className="text-3xl text-prim font-semibold">3.5k</h3>
-                            <p className="text-white">Happy Customers</p>
-                        </div>
+        {/* Content */}
+        <div className="relative z-10 flex flex-col gap-8 pb-10">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              <span className="text-yellow">Most Favorite </span>
+              Tour Places!
+            </h1>
 
-                        <div className="mt-5">
-                            <Mainbtn text="view more destinations" to='/destinations'/>
-                        </div>
-                    </div>
-                    <div className="w-full xl:w-1/1 xl:ps-10">
-                        <h1 className="text-3xl sm:text-5xl md:text-8xl lg:text-9xl font-bold text-yellow uppercase">Top!
-                            <span className="text-white block">Destination</span>
-                        </h1>
-                    </div>
+            <p className="text-gray-300 tracking-wide mt-4">
+              Choosing a destination can be exciting but also a bit
+              overwhelming with so many amazing places out there. Let's narrow
+              it down. Are you dreaming of peaceful nature, buzzing cities,
+              historical wonders, or relaxing beaches?
+            </p>
+
+            {/* Customers + CTA */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-6 mt-8">
+              <div className="flex items-center">
+                <img
+                  src={Customer1}
+                  alt="Customer"
+                  className="w-10 h-10 rounded-full object-cover border-2 border-white"
+                />
+
+                <img
+                  src={Customer2}
+                  alt="Customer"
+                  className="w-10 h-10 rounded-full object-cover border-2 border-white -ml-3"
+                />
+
+                <img
+                  src={Customer3}
+                  alt="Customer"
+                  className="w-10 h-10 rounded-full object-cover border-2 border-white -ml-3"
+                />
+
+                <div className="ml-4">
+                  <h3 className="text-2xl font-semibold text-yellow">
+                    3.5k+
+                  </h3>
+
+                  <p className="text-white text-sm">
+                    Happy Customers
+                  </p>
                 </div>
-            </div>
-            <div className="relative">
-                <button
-                    className="swiper-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-yellow text-white cursor-pointer flex items-center justify-center shadow"
-                >
-                    <Icon icon="ep:arrow-left-bold" width="24" height="24" />
-                </button>
+              </div>
 
-                <button
-                    className="swiper-next absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-yellow text-white cursor-pointer flex items-center justify-center shadow"
-                >
-                    <Icon icon="ep:arrow-right-bold" width="24" height="24" />
-                </button>
-
-                <Swiper
-                    modules={[Navigation,Autoplay]}
-                    spaceBetween={40}
-                    slidesPerView="auto"
-                    navigation={{
-                        prevEl: ".swiper-prev",
-                        nextEl: ".swiper-next",
-                    }}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
-                    loop={true}
-                    className="destination-swiper"
-                >
-                    {destinations.map((item)=>(
-                        <SwiperSlide key={item.id} className="w-65! hover:w-125! transition-all! duration-500!">
-                            <DestinationCard
-                                title={item.title}
-                                listing={item.listing}
-                                image={item.image}
-                            />
-                            
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+              <Mainbtn
+                text="View More Destinations"
+                to="/destinations"
+              />
             </div>
+          </div>
+
+          {/* Big Title */}
+          <div>
+            <h2
+              className="
+                uppercase
+                font-bold
+                leading-none
+                text-[clamp(3rem,10vw,8rem)]
+              "
+            >
+              <span className="text-yellow">Top!</span>
+
+              <span className="block text-white">
+                Destination
+              </span>
+            </h2>
+          </div>
         </div>
-       </div>
-    </>
-  )
-}
 
-export default TopDestination
+        {/* Slider */}
+        <div className="relative">
+          {/* Prev Button */}
+          <button
+            ref={prevRef}
+            aria-label="Previous destination"
+            className="
+              swiper-prev
+              absolute
+              left-0
+              top-1/2
+              -translate-y-1/2
+              z-20
+              w-12
+              h-12
+              rounded-full
+              bg-yellow
+              text-white
+              flex
+              items-center
+              justify-center
+              shadow-lg
+              cursor-pointer
+            "
+          >
+            <Icon icon="ep:arrow-left-bold" width={24} />
+          </button>
+
+          {/* Next Button */}
+          <button
+            ref={nextRef}
+            aria-label="Next destination"
+            className="
+              swiper-next
+              absolute
+              right-0
+              top-1/2
+              -translate-y-1/2
+              z-20
+              w-12
+              h-12
+              rounded-full
+              bg-yellow
+              text-white
+              flex
+              items-center
+              justify-center
+              shadow-lg
+              cursor-pointer
+            "
+          >
+            <Icon icon="ep:arrow-right-bold" width={24} />
+          </button>
+
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={24}
+            speed={800}
+            grabCursor
+            loop
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            onBeforeInit={(swiper) => {
+              swiper.params.navigation.prevEl =
+                prevRef.current;
+              swiper.params.navigation.nextEl =
+                nextRef.current;
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1.1,
+              },
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+              1280: {
+                slidesPerView: 4,
+              },
+            }}
+            className="destination-swiper px-10"
+          >
+            {destinations.map((item) => (
+              <SwiperSlide key={item.id}>
+                <div
+                  className="
+                    transition-transform
+                    duration-300
+                    hover:scale-[1.03]
+                  "
+                >
+                  <DestinationCard
+                    title={item.title}
+                    listing={item.listing}
+                    image={item.image}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TopDestination;
