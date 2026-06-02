@@ -1,26 +1,104 @@
-import React from 'react'
+import React from "react";
 
-const DestinationCard = ({title, listing, image}) => {
+const DestinationCard = ({ title, listing, image }) => {
   return (
-    <>
-        <div className="destination-item hover:bg-white group border-gray-50/20 rounded-xl p-3.75 transition-all duration-500 ease-in-out">
-            <div className="destination-image h-80 w-full rounded-xl overflow-hidden">
-                <img
-                    src={image}
-                    alt={title}
-                    className="w-full h-full object-cover"
-                />
-            </div>
+    <div
+      className="
+        group
+        relative
+        h-420px
+        overflow-hidden
+        rounded-3xl
+        cursor-pointer
+        shadow-lg
+        hover:shadow-2xl
+        transition-all
+        duration-500
+      "
+    >
+      {/* Image */}
+      <img
+        src={image}
+        alt={title}
+        className="
+          w-full
+          h-full
+          object-cover
+          transition-transform
+          duration-700
+          group-hover:scale-110
+        "
+      />
 
-            <div className="destination-content text-center pt-5">
-            <h4 className="text-2xl text-white font-medium pb-1 group-hover:text-secondary">
-                {title}
-            </h4>
-            <span className='text-md text-white group-hover:text-secondary transition-colors duration-500'>{listing} Listing</span>
-            </div>
+      {/* Overlay */}
+      <div
+        className="
+          absolute
+          inset-0
+          bg-linear-to-t
+          from-black/90
+          via-black/40
+          to-transparent
+        "
+      />
+
+      {/* Content */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          right-0
+          p-6
+        "
+      >
+        <span
+          className="
+            inline-block
+            bg-yellow
+            text-secondary
+            text-sm
+            font-semibold
+            px-3
+            py-1
+            rounded-full
+            mb-3
+          "
+        >
+          {listing} Listings
+        </span>
+
+        <h3
+          className="
+            text-3xl
+            font-bold
+            text-white
+            mb-2
+          "
+        >
+          {title}
+        </h3>
+
+        <div
+          className="
+            flex
+            items-center
+            gap-2
+            text-white
+            opacity-0
+            translate-y-3
+            group-hover:opacity-100
+            group-hover:translate-y-0
+            transition-all
+            duration-300
+          "
+        >
+          <span>Explore Destination</span>
+          →
         </div>
-    </>
-  )
-}
+      </div>
+    </div>
+  );
+};
 
-export default DestinationCard
+export default DestinationCard;

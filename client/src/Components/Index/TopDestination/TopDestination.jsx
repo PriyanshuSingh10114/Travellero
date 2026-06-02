@@ -33,9 +33,9 @@ const TopDestination = () => {
             absolute
             right-0
             top-0
-            w-[220px]
-            md:w-[350px]
-            xl:w-[500px]
+            w-220px
+            md:w-350px
+            xl:w-500px
             opacity-20
             xl:opacity-100
             pointer-events-none
@@ -194,29 +194,21 @@ const TopDestination = () => {
                 slidesPerView: 2,
               },
               1024: {
-                slidesPerView: 3,
+                slidesPerView: 2.5,
               },
               1280: {
-                slidesPerView: 4,
+                slidesPerView: 3,
               },
             }}
             className="destination-swiper px-10"
           >
             {destinations.map((item) => (
               <SwiperSlide key={item.id}>
-                <div
-                  className="
-                    transition-transform
-                    duration-300
-                    hover:scale-[1.03]
-                  "
-                >
-                  <DestinationCard
-                    title={item.title}
-                    listing={item.listing}
-                    image={item.image}
-                  />
-                </div>
+                <DestinationCard
+                  title={item.title}
+                  listing={item.listing}
+                  image={item.image}
+                />
               </SwiperSlide>
             ))}
           </Swiper>

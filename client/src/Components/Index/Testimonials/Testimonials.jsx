@@ -1,5 +1,3 @@
-import React from "react";
-
 import titleShape from "../../../assets/Title-Shape.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,118 +14,152 @@ import tst6 from "../../../assets/testimonials-06.jpg";
 
 import { Icon } from "@iconify/react";
 
-import quote from "../../../assets/Quote.png"
-
 const Testimonials = () => {
-
   const testimonials = [
-    { id: 1, name: "Kavin Martin", image: tst1 },
-    { id: 2, name: "Alex Morgan", image: tst2 },
-    { id: 3, name: "John Carter", image: tst3 },
-    { id: 4, name: "Sophia Lee", image: tst4 },
-    { id: 5, name: "Daniel Smith", image: tst5 },
-    { id: 6, name: "Emma Watson", image: tst6 },
+    {
+      id: 1,
+      name: "Kavin Martin",
+      image: tst1,
+      review:
+        "Travellero made our vacation seamless and stress-free. Everything from bookings to recommendations was perfectly organized.",
+    },
+    {
+      id: 2,
+      name: "Alex Morgan",
+      image: tst2,
+      review:
+        "The destinations suggested were amazing. We discovered places we would never have found on our own.",
+    },
+    {
+      id: 3,
+      name: "John Carter",
+      image: tst3,
+      review:
+        "Excellent service and support throughout our journey. Highly recommended for travelers.",
+    },
+    {
+      id: 4,
+      name: "Sophia Lee",
+      image: tst4,
+      review:
+        "Beautiful travel experience. The planning process was smooth and the destinations exceeded expectations.",
+    },
+    {
+      id: 5,
+      name: "Daniel Smith",
+      image: tst5,
+      review:
+        "Professional service with attention to detail. Every part of the trip was handled perfectly.",
+    },
+    {
+      id: 6,
+      name: "Emma Watson",
+      image: tst6,
+      review:
+        "One of the best travel platforms I have used. Everything felt premium and well organized.",
+    },
   ];
 
   return (
-    <>
-      <div className="bg-[#effefe] px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%]">
-        {/* TITLE SECTION */}
-        <div className="title flex flex-col justify-center items-center text-center relative pb-10">
-          <h1 className="text-secondary text-4xl md:text-6xl font-bold">
-            <span className="text-yellow">
-              Our Client
-            </span>{" "}
-            Says!
-          </h1>
-          <p className="text-secondary my-2 text-lg">
-            Destinations worth exploring! Here are a few popular spots
-          </p>
-          <img
-            src={titleShape}
-            alt="titleShape"
-            className="w-[35%] object-contain absolute -bottom-12"
-          />
-        </div>
+    <section className="bg-[#effefe] px-[5%] lg:px-[8%] py-16 lg:py-24">
+      {/* Title */}
+      <div className="flex flex-col items-center text-center relative mb-16">
+        <h2 className="text-secondary text-4xl md:text-5xl lg:text-6xl font-bold">
+          <span className="text-yellow">Our Clients</span> Say!
+        </h2>
 
-        {/* ✅ Swiper moved outside title div */}
-        <Swiper
-          modules={[Autoplay]}
-          spaceBetween={30}
-          slidesPerView={2}
-          loop={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
+        <p className="text-secondary/80 mt-3 max-w-2xl">
+          Real experiences from travelers who explored the world with us.
+        </p>
 
-          // ✅ Responsive breakpoints
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-          }}
+        <img
+          src={titleShape}
+          alt="shape"
+          className="w-120px md:w-180px object-contain absolute -bottom-8"
+        />
+      </div>
 
-          className="w-full"
-        >
+      {/* Slider */}
+      <Swiper
+        modules={[Autoplay]}
+        loop
+        grabCursor
+        speed={800}
+        spaceBetween={24}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 1.2,
+          },
+          1024: {
+            slidesPerView: 2,
+          },
+        }}
+      >
+        {testimonials.map((item) => (
+          <SwiperSlide key={item.id}>
+            <div
+              className="
+                bg-white
+                rounded-3xl
+                p-6
+                md:p-8
+                shadow-lg
+                hover:shadow-2xl
+                transition-all
+                duration-300
+                h-full
+              "
+            >
+              {/* Rating */}
+              <div className="flex items-center gap-1 mb-5">
+                {[...Array(5)].map((_, i) => (
+                  <Icon
+                    key={i}
+                    icon="material-symbols:star-rounded"
+                    width="22"
+                    height="22"
+                    className="text-yellow"
+                  />
+                ))}
+              </div>
 
-          {/* ❌ map was not returning anything */}
-          {/* ✅ Added parentheses () */}
-          {testimonials.map((item) => (
+              {/* Review */}
+              <p className="text-secondary/80 text-lg leading-relaxed mb-8">
+                "{item.review}"
+              </p>
 
-            <SwiperSlide key={item.id}>
-
-              <div className="tst-item flex justify-center">
-
-                {/* ❌ md:w-70 invalid */}
-                {/* ✅ Changed to md:w-[280px] */}
-                <div className="tst-img w-60 h-60 md:w-280px md:h-280px rounded-2xl overflow-hidden relative">
-
+              {/* User */}
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-yellow shrink-0">
                   <img
                     src={item.image}
                     alt={item.name}
                     className="w-full h-full object-cover"
                   />
-
-                  {/* STAR RATING */}
-                  <div className="flex p-1 bg-black absolute bottom-0 left-0 rounded-2xl rounded-tl-none">
-
-                    {[...Array(5)].map((_, i) => (
-
-                      <Icon
-                        key={i}
-                        icon="material-symbols:star-rounded"
-                        width="20"
-                        height="20"
-                        className="text-yellow"
-                      />
-
-                    ))}
-                  </div>
                 </div>
-                <div className="tst-content pt-2 relative">
-                  <img src={quote} alt="quote" className="w-16 h-16 absolute right-0 top-0 "/>
-                  <h2 className="text-4xl font-kaushan! text-secondary">
+
+                <div>
+                  <h3 className="text-xl font-bold text-secondary">
                     {item.name}
-                  </h2>
-                  <span className="text-yellow text-lg font-semibold">Travelor</span>
-                  <p className="pt-5 text-[20px] font-medium text-secondary/80">
-                    I Was Very Impresed Lorem posuere in miss drana en the nisan semere sceriun amiss etiam ornare in the miss drana is lorem fermen nunta mauris.
-                  </p>
-                </div>    
+                  </h3>
+
+                  <span className="text-yellow font-medium">
+                    Traveler
+                  </span>
+                </div>
               </div>
-
-            </SwiperSlide>
-
-          ))}
-
-        </Swiper>
-
-      </div>
-    </>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
   );
 };
 
