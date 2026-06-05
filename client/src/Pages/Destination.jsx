@@ -1,8 +1,7 @@
 import React from 'react'
 import titleShape from "../assets/Title-Shape.png";
-import sectionbanner from "../assets/service-page-banner.jpg";
+import sectionbanner from "../assets/bg-destination.jpg";
 import { Link } from "react-router-dom";
-
 import destinations from "../Data/DestinationCtg.json"
 import DestinationCtgCard from "../Components/DestinationCtgCard/DestinationCtgCard"
 
