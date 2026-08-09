@@ -10,7 +10,7 @@ import cloud2 from "../../../assets/Cloud2.png";
 const Hero = () => {
   return (
     <div
-      className="hero relative bg-cover bg-center min-h-screen xl:min-h-0 overflow-hidden photo-blend photo-blend-bottom blend-cream"
+      className="hero relative bg-cover bg-center min-h-screen xl:min-h-0 overflow-hidden"
       style={{ backgroundImage: `url(${headerbg})` }}
     >
       <div className="bg-overlay mx-auto px-5 sm:px-8 md:px-12 py-16 md:py-24 xl:h-screen flex items-center xl:flex-row flex-col xl:gap-0 gap-20">

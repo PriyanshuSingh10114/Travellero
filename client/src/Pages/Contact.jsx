@@ -2,6 +2,7 @@ import React from 'react'
 import titleShape from "../assets/Title-Shape.png";
 import sectionbanner from "../assets/service-page-banner.jpg";
 import { Link, useParams } from "react-router-dom";
+import SectionTransition from '../Components/SectionTransition/SectionTransition';
 
 import Mainbtn from "../Components/Buttons/Mainbtn";
 import {Icon} from "@iconify/react";
@@ -34,6 +35,8 @@ const Contact = () => {
                 </ul>
             </div>
         </div>
+
+        <SectionTransition from="teal" to="#e6f1f3" />
 
         <div className='px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%] bg-[#e6f1f3]'>
             <div className='bg-white p-5 md:p-10 rounded-3xl w-full'>

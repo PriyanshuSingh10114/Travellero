@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 @import "tailwindcss";
-
-* {
-    box-sizing: border-box;
-}
 
 @theme {
     --color-prim: #85d200;
@@ -20,6 +14,9 @@
     --font-kaushan: "Kaushan Script", cursive;
 }
 
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: var(--font-poppins);
@@ -36,7 +33,7 @@ a {
 
 @keyframes rotate-scale-up-ver {
    0% {
-    transform: rotateY(180) scale(1);
+    transform: rotateY(180deg) scale(1);
    }
    
    50% {
@@ -47,6 +44,56 @@ a {
      transform: rotateY(360deg) scale(1);
     }
 }
+
+/* ==================================================
+   GLOBAL SECTION-TO-SECTION COLOR BLENDING SYSTEM
+   ================================================== */
+
+:root {
+    --from-color: #066168;
+    --to-color: #fef9eb;
+    --transition-height: clamp(45px, 6.5vw, 100px);
+}
+
+/* Standalone Transition Element */
+.section-transition {
+    position: relative;
+    width: 100%;
+    height: var(--transition-height);
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 5;
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+/* Inner Multi-stop Organic Gradient Layer (Single Source of Truth) */
+.section-transition-inner {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        var(--from-color) 0%,
+        color-mix(in srgb, var(--from-color) 75%, var(--to-color)) 30%,
+        color-mix(in srgb, var(--from-color) 45%, var(--to-color)) 55%,
+        color-mix(in srgb, var(--from-color) 15%, var(--to-color)) 80%,
+        var(--to-color) 100%
+    );
+}
+
+/* Preset Combination Helper Utilities */
+.blend-teal-to-cream { --from-color: #066168; --to-color: #fef9eb; }
+.blend-cream-to-white { --from-color: #fef9eb; --to-color: #ffffff; }
+.blend-white-to-teal { --from-color: #ffffff; --to-color: #066168; }
+.blend-cream-to-teal { --from-color: #fef9eb; --to-color: #066168; }
+.blend-teal-to-white { --from-color: #066168; --to-color: #ffffff; }
+.blend-white-to-cream { --from-color: #ffffff; --to-color: #fef9eb; }
+.blend-cyan-to-teal { --from-color: #effefe; --to-color: #066168; }
+.blend-teal-to-cyan { --from-color: #066168; --to-color: #effefe; }
+.blend-blue-to-white { --from-color: #DBEEEE; --to-color: #ffffff; }
+.blend-white-to-blue { --from-color: #ffffff; --to-color: #DBEEEE; }
+.blend-white-to-cyan { --from-color: #ffffff; --to-color: #effefe; }
+.blend-cyan-to-white { --from-color: #effefe; --to-color: #ffffff; }
 
 /* ==================================================
    GLOBAL TRAVELOR PHOTO BLENDING SYSTEM
@@ -255,9 +302,8 @@ a {
     background: linear-gradient(
         180deg,
         rgba(6, 97, 104, 0.65) 0%,
-        rgba(6, 97, 104, 0.25) 45%,
-        rgba(6, 97, 104, 0.40) 80%,
-        rgba(6, 97, 104, 0.85) 100%
+        rgba(6, 97, 104, 0.20) 60%,
+        rgba(6, 97, 104, 0.50) 100%
     );
 }
 

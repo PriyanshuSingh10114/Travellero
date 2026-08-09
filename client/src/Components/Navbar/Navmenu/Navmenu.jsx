@@ -37,43 +37,43 @@ function Navmenu({menuOpen,toggleMenu}) {
         </div>
 
         {/* Main Dropdown */}
-        <ul className="absolute top-full left-0 mt-2 bg-white rounded-xl shadow-lg 
+        <ul className="absolute top-full left-0 mt-2 bg-white rounded-xl shadow-xl border border-gray-100 min-w-56 overflow-hidden 
           invisible opacity-0 translate-y-2 
           group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 
-          transition-all duration-300 z-50 text-green-400">
+          transition-all duration-300 z-50 text-gray-800">
 
-          <li className="border-b">
-            <Link to="/services" className="font-semibold block px-4 py-2 hover:translate-x-1 transition">
+          <li className="border-b border-gray-100">
+            <Link to="/services" className="font-semibold block px-4 py-2.5 hover:bg-[#fef9eb] hover:text-[#066168] hover:translate-x-1 transition-all">
               Services
             </Link>
           </li>
 
-          <li className="border-b">
-            <Link to="/services/1" className="block px-4 py-2 hover:translate-x-1 transition">
+          <li className="border-b border-gray-100">
+            <Link to="/services/1" className="block px-4 py-2.5 hover:bg-[#fef9eb] hover:text-[#066168] hover:translate-x-1 transition-all">
               Services Details
             </Link>
           </li>
 
           {/* Testimonials submenu */}
-          <li className="relative group/testimonial border-b">
-            <div className="flex justify-between items-center px-4 py-2 cursor-pointer">
+          <li className="relative group/testimonial border-b border-gray-100">
+            <div className="flex justify-between items-center px-4 py-2.5 cursor-pointer hover:bg-[#fef9eb] hover:text-[#066168] transition-all">
               Testimonials
               <Icon icon="ri:arrow-right-s-line" width="20" />
             </div>
 
-            <ul className="absolute top-0 left-full min-w-52 bg-white rounded-e-xl 
+            <ul className="absolute top-0 left-full min-w-52 bg-white rounded-e-xl shadow-xl border border-gray-100
               invisible opacity-0 translate-y-2 
               group-hover/testimonial:visible group-hover/testimonial:opacity-100 group-hover/testimonial:translate-y-0 
-              transition-all">
+              transition-all text-gray-800">
 
-              <li className="border-b">
-                <Link to="/testimonials" className="block px-4 py-2 hover:translate-x-1 transition">
+              <li className="border-b border-gray-100">
+                <Link to="/testimonials" className="block px-4 py-2.5 hover:bg-[#fef9eb] hover:text-[#066168] hover:translate-x-1 transition-all">
                   Testimonials
                 </Link>
               </li>
 
               <li>
-                <Link to="/testimonials/1" className="block px-4 py-2 hover:translate-x-1 transition">
+                <Link to="/testimonials/1" className="block px-4 py-2.5 hover:bg-[#fef9eb] hover:text-[#066168] hover:translate-x-1 transition-all">
                   Testimonial Details
                 </Link>
               </li>
@@ -81,45 +81,45 @@ function Navmenu({menuOpen,toggleMenu}) {
           </li>
 
           {/* Tour Guide submenu */}
-          <li className="relative group/tourguide border-b">
-            <div className="flex justify-between items-center px-4 py-2 cursor-pointer">
+          <li className="relative group/tourguide border-b border-gray-100">
+            <div className="flex justify-between items-center px-4 py-2.5 cursor-pointer hover:bg-[#fef9eb] hover:text-[#066168] transition-all">
               Tour Guide
               <Icon icon="ri:arrow-right-s-line" width="20" />
             </div>
 
-            <ul className="absolute top-0 left-full min-w-52 bg-white rounded-e-xl 
+            <ul className="absolute top-0 left-full min-w-52 bg-white rounded-e-xl shadow-xl border border-gray-100
               invisible opacity-0 translate-y-2 
               group-hover/tourguide:visible group-hover/tourguide:opacity-100 group-hover/tourguide:translate-y-0 
-              transition-all">
+              transition-all text-gray-800">
 
-              <li className="border-b">
-                <Link to="/tour-guide" className="block px-4 py-2 hover:translate-x-1 transition">
+              <li className="border-b border-gray-100">
+                <Link to="/tour-guide" className="block px-4 py-2.5 hover:bg-[#fef9eb] hover:text-[#066168] hover:translate-x-1 transition-all">
                   Tour Guide
                 </Link>
               </li>
 
               <li>
-                <Link to="/tourguide/1" className="block px-4 py-2 hover:translate-x-1 transition">
+                <Link to="/tourguide/1" className="block px-4 py-2.5 hover:bg-[#fef9eb] hover:text-[#066168] hover:translate-x-1 transition-all">
                   Tour Guide Details
                 </Link>
               </li>
             </ul>
           </li>
 
-          <li className="border-b">
-            <Link to="/faqs" className="block px-4 py-2 hover:translate-x-1 transition">
+          <li className="border-b border-gray-100">
+            <Link to="/faqs" className="block px-4 py-2.5 hover:bg-[#fef9eb] hover:text-[#066168] hover:translate-x-1 transition-all">
               FAQs
             </Link>
           </li>
 
-          <li className="border-b">
-            <Link to="/pricing" className="block px-4 py-2 hover:translate-x-1 transition">
+          <li className="border-b border-gray-100">
+            <Link to="/pricing" className="block px-4 py-2.5 hover:bg-[#fef9eb] hover:text-[#066168] hover:translate-x-1 transition-all">
               Pricing
             </Link>
           </li>
 
           <li>
-            <Link to="/pagenotfound" className="block px-4 py-2 hover:translate-x-1 transition">
+            <Link to="/pagenotfound" className="block px-4 py-2.5 hover:bg-[#fef9eb] hover:text-[#066168] hover:translate-x-1 transition-all">
               Error-404
             </Link>
           </li>

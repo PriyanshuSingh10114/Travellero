@@ -4,6 +4,7 @@ import sectionbanner from "../assets/service-page-banner.jpg";
 import { Link } from "react-router-dom";
 import services from "../Data/Services.json";
 import Testimonials from "../Components/Index/Testimonials/Testimonials";
+import SectionTransition from "../Components/SectionTransition/SectionTransition";
 
 
 const Services = () => {
@@ -74,6 +75,7 @@ const Services = () => {
               </div>
         </div>
 
+        <SectionTransition from="teal" to="cyan" />
         <Testimonials/>
     </>
   )

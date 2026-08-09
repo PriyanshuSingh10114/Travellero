@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom";
 
 import BlogCard from '../Components/BlogCard/BlogCard';
 import blogdata from '../Data/Blogs.json'
+import SectionTransition from '../Components/SectionTransition/SectionTransition';
 
 const Blogs = () => {
   return (
@@ -33,6 +34,8 @@ const Blogs = () => {
                 </ul>
             </div>
         </div>
+
+        <SectionTransition from="teal" to="white" />
 
         <div className='blog-wrap grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%]'>
             {blogdata.map((item)=>(

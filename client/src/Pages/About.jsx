@@ -19,6 +19,7 @@ import { useState , useRef} from 'react';
 
 import destinations from "../Data/DestinationCtg.json"
 import DestinationCtgCard from "../Components/DestinationCtgCard/DestinationCtgCard"
+import SectionTransition from "../Components/SectionTransition/SectionTransition"
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -63,6 +64,8 @@ const About = () => {
                 </ul>
             </div>
         </div>
+
+        <SectionTransition from="teal" to="cream" />
 
         <div className="px-[2%] md:px-[8%] lg:px-[12%] py-[6%] md:py-[10%] flex justify-between items-start xl:flex-row flex-col gap-12 h-auto xl:h-250 bg-yellow-light">
             <div className='about-image w-full xl:w-[50%] relative flex justify-center items-center h-full '>

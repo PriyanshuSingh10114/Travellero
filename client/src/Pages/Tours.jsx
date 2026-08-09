@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 import tourData from "../Data/PopularTours.json"
 import PopularTourCard from '../Components/Index/PopularTourCard/PopularTourCard';
+import SectionTransition from '../Components/SectionTransition/SectionTransition';
 
 const Tours = () => {
   return (
@@ -34,6 +35,8 @@ const Tours = () => {
               </ul>
           </div>
       </div>
+
+      <SectionTransition from="teal" to="cyan" />
 
       <div className="bg-[#effefe] px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%]">
         <div className="title flex flex-col justify-center items-center text-center relative mb-10">

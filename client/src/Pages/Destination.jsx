@@ -4,6 +4,7 @@ import sectionbanner from "../assets/section-banner.jpg";
 import { Link } from "react-router-dom";
 import destinations from "../Data/DestinationCtg.json"
 import DestinationCtgCard from "../Components/DestinationCtgCard/DestinationCtgCard"
+import SectionTransition from "../Components/SectionTransition/SectionTransition"
 
 const Destination = () => {
   return (
@@ -32,6 +33,8 @@ const Destination = () => {
                 </ul>
             </div>
         </div>
+
+        <SectionTransition from="teal" to="#e6f1f3" />
 
         <div className='destination px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%] grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-10 bg-[#e6f1f3]'>
             {destinations.map((item)=>(
