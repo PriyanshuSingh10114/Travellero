@@ -40,6 +40,8 @@ const TopDestination = () => {
             xl:opacity-100
             pointer-events-none
             select-none
+            z-0
+            img-blend-mask-all
           "
         />
 

@@ -48,11 +48,283 @@ a {
     }
 }
 
+/* ==================================================
+   GLOBAL TRAVELOR PHOTO BLENDING SYSTEM
+   ================================================== */
+
+:root {
+    --blend-color: #fef9eb;
+    --blend-color-top: var(--blend-color, #fef9eb);
+    --blend-color-bottom: var(--blend-color, #fef9eb);
+    --blend-color-left: var(--blend-color, #fef9eb);
+    --blend-color-right: var(--blend-color, #fef9eb);
+    --blend-size-top: clamp(80px, 15vh, 180px);
+    --blend-size-bottom: clamp(80px, 15vh, 180px);
+    --blend-size-side: clamp(60px, 10vw, 140px);
+}
+
+/* Color Palette Utility Modifiers */
+.blend-cream { --blend-color: #fef9eb; --blend-color-top: #fef9eb; --blend-color-bottom: #fef9eb; }
+.blend-teal { --blend-color: #066168; --blend-color-top: #066168; --blend-color-bottom: #066168; }
+.blend-white { --blend-color: #ffffff; --blend-color-top: #ffffff; --blend-color-bottom: #ffffff; }
+.blend-cyan { --blend-color: #effefe; --blend-color-top: #effefe; --blend-color-bottom: #effefe; }
+.blend-yellow { --blend-color: #fff1da; --blend-color-top: #fff1da; --blend-color-bottom: #fff1da; }
+
+/* 
+   Core Container Blending Utility Classes
+*/
+.photo-blend {
+    position: relative;
+    overflow: hidden;
+}
+
+/* TOP BLEND */
+.photo-blend-top {
+    position: relative;
+    overflow: hidden;
+}
+.photo-blend-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--blend-size-top);
+    background: linear-gradient(
+        to bottom,
+        var(--blend-color-top) 0%,
+        color-mix(in srgb, var(--blend-color-top) 75%, transparent) 35%,
+        color-mix(in srgb, var(--blend-color-top) 35%, transparent) 70%,
+        transparent 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* BOTTOM BLEND */
+.photo-blend-bottom {
+    position: relative;
+    overflow: hidden;
+}
+.photo-blend-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--blend-size-bottom);
+    background: linear-gradient(
+        to top,
+        var(--blend-color-bottom) 0%,
+        color-mix(in srgb, var(--blend-color-bottom) 75%, transparent) 35%,
+        color-mix(in srgb, var(--blend-color-bottom) 35%, transparent) 70%,
+        transparent 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* BOTH (TOP & BOTTOM) BLEND */
+.photo-blend-both {
+    position: relative;
+    overflow: hidden;
+}
+.photo-blend-both::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--blend-size-top);
+    background: linear-gradient(
+        to bottom,
+        var(--blend-color-top) 0%,
+        color-mix(in srgb, var(--blend-color-top) 75%, transparent) 35%,
+        color-mix(in srgb, var(--blend-color-top) 35%, transparent) 70%,
+        transparent 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+}
+.photo-blend-both::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--blend-size-bottom);
+    background: linear-gradient(
+        to top,
+        var(--blend-color-bottom) 0%,
+        color-mix(in srgb, var(--blend-color-bottom) 75%, transparent) 35%,
+        color-mix(in srgb, var(--blend-color-bottom) 35%, transparent) 70%,
+        transparent 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* LEFT BLEND */
+.photo-blend-left {
+    position: relative;
+    overflow: hidden;
+}
+.photo-blend-left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--blend-size-side);
+    background: linear-gradient(
+        to right,
+        var(--blend-color-left) 0%,
+        color-mix(in srgb, var(--blend-color-left) 60%, transparent) 50%,
+        transparent 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* RIGHT BLEND */
+.photo-blend-right {
+    position: relative;
+    overflow: hidden;
+}
+.photo-blend-right::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: var(--blend-size-side);
+    background: linear-gradient(
+        to left,
+        var(--blend-color-right) 0%,
+        color-mix(in srgb, var(--blend-color-right) 60%, transparent) 50%,
+        transparent 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* ALL SIDES VIGNETTE BLEND */
+.photo-blend-all {
+    position: relative;
+    overflow: hidden;
+}
+.photo-blend-all::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse at center,
+        transparent 50%,
+        color-mix(in srgb, var(--blend-color) 45%, transparent) 75%,
+        var(--blend-color) 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Image Element Masks (for direct <img> styling) */
+.img-blend-mask-bottom {
+    mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+}
+
+.img-blend-mask-top {
+    mask-image: linear-gradient(to top, black 65%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to top, black 65%, transparent 100%);
+}
+
+.img-blend-mask-both {
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+}
+
+.img-blend-mask-all {
+    mask-image: radial-gradient(ellipse at center, black 55%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 55%, transparent 100%);
+}
+
 .bg-overlay {
     position: relative;
     width: 100%;
     min-height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(
+        180deg,
+        rgba(6, 97, 104, 0.65) 0%,
+        rgba(6, 97, 104, 0.25) 45%,
+        rgba(6, 97, 104, 0.40) 80%,
+        rgba(6, 97, 104, 0.85) 100%
+    );
+}
+
+.hero {
+    position: relative;
+}
+
+.section-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70%;
+    background: linear-gradient(
+        to bottom,
+        rgba(6, 97, 104, 0.85) 0%,
+        rgba(6, 97, 104, 0.40) 50%,
+        transparent 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+.section-banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45%;
+    background: linear-gradient(
+        to top,
+        var(--blend-color-bottom, rgba(6, 97, 104, 0.65)) 0%,
+        color-mix(in srgb, var(--blend-color-bottom, #066168) 35%, transparent) 50%,
+        transparent 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+.section-banner .section-content {
+    position: relative;
+    z-index: 2;
+}
+
+.section-banner .section-content h4,
+.section-banner .section-content h1,
+.section-banner .section-content h2,
+.section-banner .section-content h3 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.section-banner .section-content a,
+.section-banner .section-content span {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-banner .section-content a:hover {
+    color: var(--color-yellow) !important;
 }
 
 /* Hero section */
@@ -514,7 +786,7 @@ img{
 }
 
 .SpecialOfferBanner {
-  background-image: url(../src/assets/Index/BookingSteps/Banner-bg.png);
+  background-image: url(./assets/Banner-bg.png);
   background-repeat: no-repeat;
   background-size: contain;
 }

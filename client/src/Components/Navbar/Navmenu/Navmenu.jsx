@@ -153,21 +153,22 @@ function Navmenu({menuOpen,toggleMenu}) {
     </ul>
         <div
           onClick={toggleMenu}
-          className={`fixed inset-0 bg-black/40 z-30 transition-opacity duration-500 ${
+          className={`fixed inset-0 bg-[#066168]/50 backdrop-blur-xs z-30 transition-opacity duration-500 ${
             menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         />
 
     <div
-      className={`fixed top-0 left-0 h-screen w-full lg:w-[45%] xl:w-[35%] bg-black text-white z-40 px-8 py-30 transform transition-transform duration-700 ease-in-out ${
+      className={`fixed top-0 left-0 h-screen w-full lg:w-[45%] xl:w-[35%] bg-[#044449] text-white z-40 px-8 py-30 transform transition-transform duration-700 ease-in-out border-r border-white/10 shadow-2xl ${
         menuOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
       <div
         onClick={toggleMenu}
-        className="close-btn cursor-pointer absolute bg-black top-8 right-8 rounded-sm text-black"
+        className="close-btn cursor-pointer absolute bg-white/10 hover:bg-white/20 top-8 right-8 rounded-full p-1.5 text-white transition-colors duration-300 flex justify-center items-center"
       >
         <Icon icon="material-symbols-light:close" width="24" height="24" />
+      </div>
 
         <div className='lg:block:hidden'>
           <Logo/>
@@ -251,7 +252,6 @@ function Navmenu({menuOpen,toggleMenu}) {
 
           </ul>
         </div>
-      </div>
 
       <ul className="space-y-5 lg:hidden block">
         <li>

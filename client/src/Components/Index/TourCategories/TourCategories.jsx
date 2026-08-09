@@ -68,7 +68,7 @@ const TourCategories = () => {
 
   return (
     <div
-      className="tour-ctg-container bg-no-repeat bg-center bg-cover px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%] flex flex-col xl:flex-row gap-12 relative"
+      className="tour-ctg-container bg-no-repeat bg-center bg-cover px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%] flex flex-col xl:flex-row gap-12 relative photo-blend photo-blend-both blend-cyan"
       style={{ backgroundImage: `url(${tourbg})` }}
     >
       {/* Left Content */}

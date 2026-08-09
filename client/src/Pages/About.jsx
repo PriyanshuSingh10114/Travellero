@@ -158,13 +158,12 @@ const About = () => {
                     delay: 3000,
                     disableOnInteraction: false,
                 }}
-                onSwiper={(swiper)=>{
-                    setSwiperInstance(swiper);
+                onBeforeInit={(swiper) => {
+                    swiper.params.navigation.prevEl = prevRef.current;
+                    swiper.params.navigation.nextEl = nextRef.current;
                 }}
-                navigation={{
-                    prevEl: prevRef.current,
-                    nextEl: nextRef.current,
-                }}
+                onSwiper={setSwiperInstance}
+                navigation={true}
 
                 breakpoints={{
                     0: {slidesPerView: 1},

@@ -11,7 +11,7 @@ const Blogs = () => {
   return (
     <>
     <div
-    className="blog px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%] bg-secondary bg-repeat w-full"
+    className="blog px-[2%] sm:px-[8%] lg:px-[12%] py-[6%] md:py-[10%] bg-secondary bg-repeat w-full photo-blend photo-blend-both blend-teal"
     style={{ backgroundImage: `url(${pattern})` }}
     >
         <div className="blog-title flex justify-between items-end flex-wrap pb-10 gap-5">

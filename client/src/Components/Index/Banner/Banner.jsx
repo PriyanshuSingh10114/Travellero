@@ -6,7 +6,13 @@ import {Icon} from "@iconify/react"
 const Banner = () => {
   return (
     <>
-    <div className="banner h-100 md:h-200 w-full relative">
+    <div
+      className="banner h-100 md:h-200 w-full relative photo-blend photo-blend-both"
+      style={{
+        '--blend-color-top': '#effefe',
+        '--blend-color-bottom': '#066168',
+      }}
+    >
         <video
             muted
             autoPlay

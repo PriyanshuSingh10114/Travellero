@@ -1,6 +1,6 @@
 import React from 'react'
 import titleShape from "../assets/Title-Shape.png";
-import sectionbanner from "../assets/bg-tours.jpg";
+import sectionbanner from "../assets/tour-bg.jpg";
 import { Link } from "react-router-dom";
 
 import tourData from "../Data/PopularTours.json"

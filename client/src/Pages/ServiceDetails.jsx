@@ -23,6 +23,7 @@ import "swiper/css/pagination";
 
 const ServiceDetails = () => {
     const {id} = useParams();
+    const [activeIndex, setActiveIndex]=useState(null);
 
     const service = services.find(
         (item)=>item.id===parseInt(id)
@@ -33,8 +34,6 @@ const ServiceDetails = () => {
             Service Not Found
         </h2>
     }
-
-    const [activeIndex, setActiveIndex]=useState(null);
 
     const toggleFAQ = (index) => {
         setActiveIndex(activeIndex === index ? null:index);

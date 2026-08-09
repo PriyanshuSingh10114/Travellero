@@ -10,7 +10,7 @@ import cloud2 from "../../../assets/Cloud2.png";
 const Hero = () => {
   return (
     <div
-      className="hero relative bg-cover bg-center min-h-screen xl:min-h-0 overflow-hidden"
+      className="hero relative bg-cover bg-center min-h-screen xl:min-h-0 overflow-hidden photo-blend photo-blend-bottom blend-cream"
       style={{ backgroundImage: `url(${headerbg})` }}
     >
       <div className="bg-overlay mx-auto px-5 sm:px-8 md:px-12 py-16 md:py-24 xl:h-screen flex items-center xl:flex-row flex-col xl:gap-0 gap-20">
@@ -90,7 +90,7 @@ const Hero = () => {
           <img
             src={heroimg}
             alt="hero-img"
-            className="w-full h-full xl:w-auto z-2 xl:translate-y-15"
+            className="w-full h-full xl:w-auto z-2 xl:translate-y-15 img-blend-mask-bottom"
           />
 
           <div className="plan absolute w-120 h-auto top-50 -left-10 xl:block hidden">
